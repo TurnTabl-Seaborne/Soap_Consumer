@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '15'
 
 repositories {
 	mavenCentral()
@@ -35,7 +35,7 @@ task genJaxb {
 				produces(dir: sourcesDir, includes: "**/*.java")
 			}
 
-			javac(destdir: classesDir, source: 1.8, target: 1.8, debug: true,
+			javac(destdir: classesDir, source: 15, target: 15, debug: true,
 					debugLevel: "lines,vars,source",
 					classpath: configurations.jaxb.asPath) {
 				src(path: sourcesDir)
