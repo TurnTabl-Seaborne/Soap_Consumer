@@ -15,7 +15,7 @@ public class OrderClient extends WebServiceGatewaySupport {
 
 
         SendOrderResponse response = (SendOrderResponse) getWebServiceTemplate()
-                .marshalSendAndReceive("http://localhost:8082/ws", request);
+                .marshalSendAndReceive("http://order-validator.herokuapp.com/ws", request);
 
         return response;
     }
